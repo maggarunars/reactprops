@@ -1,0 +1,20 @@
+body { 
+    font-family: 'Courier New', Courier, monospace ;
+    background-color: rgb(214, 190, 236);     
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly
+
+}
+
+.imageContainer{
+ width: 100%;
+ height: 260px;
+ object-fit: cover;
+
+}

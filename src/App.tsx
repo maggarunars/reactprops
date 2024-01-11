@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from './Card'
 
 function App() {
+  const blogs = [
+    {
+      pictureURL: "https://www.interviewmagazine.com/wp-content/uploads/2021/01/ARLO.PARKS_Credit_Alex-Kurunis_-1-e1611695405952.jpg",
+      name: "Arlo Parks",
+      song: "Devotion",
+    },
+    {
+      pictureURL: "https://atorecords.com/wp-content/uploads/2020/07/Black-Pumas-Deluxe-Press-Photo-scaled.jpg",
+      name: "Black Pumas",
+      song: "I'm ready",
+    },
+    {
+      pictureURL: "https://thefortyfive.com/wp-content/uploads/Alfie-Templeman1-scaled.jpg",
+      name: "Alfie Templeman",
+      song: "Circles",
+    }
+
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+    <div>
+    <h1>Amazing musicians and some of their songs</h1>
+    <div className="container">
+ 
+    {blogs.map((blog)=>{
+      return (<div key={blog.name}> <Card pic={blog.pictureURL} name={blog.name} song={blog.song}></Card>
+      </div>)
+
+
+} )}
+</MainContainer>
+</div>
+</div>
   );
 }
 
